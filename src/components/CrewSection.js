@@ -110,7 +110,7 @@ const CrewSection = () => {
               className="group bg-white/70 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
             >
               {/* Member Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={member.photo}
                   alt={member.name}
@@ -130,15 +130,15 @@ const CrewSection = () => {
               </div>
 
               {/* Member Info */}
-              <div className="p-4">
-                <div className="text-center mb-3">
+              <div className="p-3">
+                <div className="text-center mb-2">
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
                   <p className="text-blue-600 font-medium text-sm">{member.funFact}</p>
                 </div>
 
                 {/* Description */}
                 <div className="text-center">
-                  <p className={`text-gray-700 text-sm leading-relaxed transition-all duration-300 ${
+                  <p className={`text-gray-700 text-xs leading-relaxed transition-all duration-300 ${
                     expandedMember === member.id ? 'line-clamp-none' : 'line-clamp-3'
                   }`}>
                     {member.description}
@@ -146,7 +146,7 @@ const CrewSection = () => {
                   
                   <button
                     onClick={() => toggleMemberExpansion(member.id)}
-                    className="text-blue-600 hover:text-blue-800 font-medium text-xs mt-2 transition-colors"
+                    className="text-blue-600 hover:text-blue-800 font-medium text-xs mt-1 transition-colors"
                   >
                     {expandedMember === member.id ? 'Read Less' : 'Read More'}
                   </button>

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.0",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "@tailwindcss/aspect-ratio": "^0.4.2"
+  },
+  "main": "/index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  }
+}

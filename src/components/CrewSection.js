@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, Mail, Send, MapPin, GraduationCap, Award } from 'lucide-react';
+import { Instagram, UserPlus, MapPin, GraduationCap, Award } from 'lucide-react';
 
 const crewMembers = [
   {
@@ -29,28 +29,7 @@ const crewMembers = [
 ];
 
 const CrewSection = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [expandedMember, setExpandedMember] = useState(null);
-
-  const handleEmailSubmit = () => {
-    if (!email) return;
-    
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setIsSubmitting(false);
-      setEmail('');
-      
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 1000);
-  };
 
   const toggleMemberExpansion = (memberId) => {
     setExpandedMember(expandedMember === memberId ? null : memberId);
@@ -208,59 +187,27 @@ const CrewSection = () => {
                   Ready to catch some waves and make lifelong friends? Connect with us!
                 </p>
                 
-                {/* Instagram Link */}
+                {/* Join Form Button */}
                 <a
-                  href="https://instagram.com/fiusurfclub"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfiBjwcwiqWjNG6JABtm4GXLe4oDjTNi1nNIVM5u1l1eiQorQ/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-6 py-4 rounded-2xl font-bold text-white transition-all duration-300 shadow-lg hover:shadow-xl mb-6 w-full justify-center hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg w-full justify-center mb-4"
+                >
+                  <UserPlus className="w-5 h-5 mr-2" />
+                  Join the Club
+                </a>
+                
+                {/* Instagram Link */}
+                <a
+                  href="https://www.instagram.com/fiusurf/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-6 py-4 rounded-2xl font-bold text-white transition-all duration-300 shadow-lg hover:shadow-xl w-full justify-center hover:scale-105"
                 >
                   <Instagram className="w-6 h-6" />
-                  Follow @FIUSurfClub
+                  Follow @FIUSurf
                 </a>
-
-                {/* Email Signup */}
-                <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                      <Mail className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Stay Updated</h4>
-                      <p className="text-blue-100 text-sm">Get event notifications & surf reports</p>
-                    </div>
-                  </div>
-                  
-                  {isSubmitted ? (
-                    <div className="bg-green-500 text-white py-4 px-6 rounded-xl font-bold text-center shadow-lg">
-                      🌊 Awesome! Welcome to the crew - check your email!
-                    </div>
-                  ) : (
-                    <div className="space-y-4">
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Enter your email address"
-                        className="w-full px-4 py-3 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all font-medium"
-                      />
-                      <button
-                        onClick={handleEmailSubmit}
-                        disabled={isSubmitting || !email}
-                        className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 disabled:from-green-400 disabled:to-emerald-500 px-6 py-3 rounded-xl font-bold text-white transition-all duration-300 flex items-center gap-3 justify-center shadow-lg hover:scale-105 disabled:scale-100"
-                      >
-                        {isSubmitting ? (
-                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5" />
-                            Join the Crew!
-                          </>
-                        )}
-                      </button>
-                    </div>
-                  )}
-                </div>
               </div>
             </div>
           </div>

@@ -78,26 +78,6 @@ const TripsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-20 text-center bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto"
-        >
-          <h3 className="text-3xl font-bold text-gray-900 mb-6">Sign Up for Our Next Trip!</h3>
-          <p className="text-gray-700 mb-8">
-            Don't miss the chance to explore new waves with the crew. Fill out the form for more info!
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-blue-600 text-white text-xl font-bold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
-          >
-            Trip Sign-up Form
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );

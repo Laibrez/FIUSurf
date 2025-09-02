@@ -29,13 +29,10 @@ const Footer = () => {
         <div>
           <h4 className="text-xl font-bold mb-4">Follow Us</h4>
           <div className="flex justify-center md:justify-start space-x-4 mb-6">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+            <a href="https://www.instagram.com/fiusurf/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
               <Instagram size={28} />
             </a>
-            {/* <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
-              <TikTok size={28} />
-            </a> */}
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+            <a href="https://m.youtube.com/@radlads305" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors duration-300">
               <Youtube size={28} />
             </a>
           </div>

@@ -183,6 +183,7 @@ const CompetitionSection = () => {
               
               <div className="space-y-4">
                 <motion.button
+                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdUCybB7bGEfTrhF7q2XPWHZQ78n2Qd1kxSaN_gULJSCHmlYA/viewform', '_blank')}
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: '0 20px 40px rgba(255, 140, 0, 0.4)',
@@ -192,14 +193,6 @@ const CompetitionSection = () => {
                 >
                   <Users className="w-5 h-5 inline mr-2" />
                   REGISTER NOW
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full py-4 border-2 border-white/50 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
-                >
-                  VIEW PAST RESULTS
                 </motion.button>
               </div>
             </motion.div>

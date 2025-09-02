@@ -6,7 +6,7 @@ import ShopSection from './components/ShopSection';
 import SurfingSection from './components/SurfingSection';
 import FilmsSection from './components/FilmsSection';
 import TripsSection from './components/TripsSection';
-import EventsCalendar from './components/EventsCalendar';
+import Calendar from './components/Calendar'; // Import Calendar component
 import CompetitionSection from './components/CompetitionSection';
 import SkatingSection from './components/SkatingSection';
 import CrewSection from './components/CrewSection';
@@ -113,13 +113,11 @@ export default function App() {
           <Navbar />
           <HeroSection />
           <MerchSection onProductClick={handleProductClick} />
-          <SurfingSection />
-          <FilmsSection />
-          <TripsSection />
-          <EventsCalendar />
-          <CompetitionSection />
-          <SkatingSection />
           <CrewSection />
+          <Calendar id="calendar" /> {/* Include Calendar component */}
+          <SurfingSection />
+          <TripsSection />
+          <CompetitionSection />
           <Footer />
         </>
       )}
@@ -165,6 +163,10 @@ export default function App() {
           </div>
         </div>
       )}
+
+      <button onClick={() => document.querySelector('#calendar')?.scrollIntoView({ behavior: 'smooth' })}>
+        Scroll to Calendar
+      </button>
     </div>
   );
 }

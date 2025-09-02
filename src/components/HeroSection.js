@@ -132,7 +132,7 @@ const HeroSection = () => {
             className="group relative px-10 py-5 bg-orange-600 text-white text-lg font-bold rounded-full shadow-xl overflow-hidden transform transition-all duration-300"
           >
             <span className="relative z-10 flex items-center gap-2">
-              JOIN THE CREW
+              JOIN THE CLUB
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}

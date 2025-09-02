@@ -17,19 +17,23 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
+    { name: 'Merch', href: '#merch' },
+    { name: 'Crew', href: '#crew' },
+    { name: 'Calendar', href: '#calendar' }, // Ensure this matches the id in App.js
     { name: 'Surfing', href: '#surfing' },
-    { name: 'Films', href: '#films' },
     { name: 'Trips', href: '#trips' },
-    { name: 'Events', href: '#events' },
-    { name: 'Skating', href: '#skating' },
-    { name: 'Competition', href: '#competition' },
-    { name: 'Crew', href: '#crew' }
+    { name: 'Competitions', href: '#competitions' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   const scrollToSection = (href) => {
+    console.log(`Attempting to scroll to: ${href}`); // Log the href being passed
     const element = document.querySelector(href);
     if (element) {
+      console.log(`Element found:`, element); // Log the element if found
       element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error(`Element not found for href: ${href}`); // Log an error if the element is not found
     }
     setIsMobileMenuOpen(false);
   };
@@ -108,10 +112,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('#crew')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-2 rounded-full font-semibold border-2 transition-all duration-200 ${
-                isScrolled
-                  ? 'border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-                  : 'border-white text-white hover:bg-white hover:text-orange-600'
+              className={`px-6 py-2 rounded-full font-semibold border-2 transition-all duration-200: 'border-white text-white hover:bg-white hover:text-orange-600'
               }`}
             >
               Join Us
@@ -155,6 +156,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -213,5 +215,6 @@ const Navbar = () => {
     </motion.nav>
   );
 };
+
 
 export default Navbar;

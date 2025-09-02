@@ -58,6 +58,15 @@ const Footer = () => {
       <div className="mt-8 text-center text-gray-500 text-sm">
         &copy; {new Date().getFullYear()} FIU Surf Club. All rights reserved.
       </div>
+      <div className="container mx-auto text-center mt-4">
+        <p>Contact us: <a href="mailto:fiusurfclub@gmail.com" className="text-orange-400 hover:underline">fiusurfclub@gmail.com</a></p>
+        <p>
+          Follow us on Instagram: 
+          <a href="https://www.instagram.com/fiusurf/" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:underline">
+            @fiusurf
+          </a>
+        </p>
+      </div>
     </motion.footer>
   );
 };

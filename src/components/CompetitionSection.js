@@ -203,4 +203,5 @@ const CompetitionSection = () => {
   );
 };
 
+
 export default CompetitionSection;

@@ -15,6 +15,13 @@ const HeroSection = () => {
     return () => window.removeEventListener('mousemove', updateMousePosition);
   }, []);
 
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Floating wave elements inspired by the designs
   const floatingElements = Array.from({ length: 8 }, (_, i) => (
     <motion.div
@@ -114,6 +121,7 @@ const HeroSection = () => {
         {/* Enhanced Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 relative z-20">
           <motion.button
+            onClick={() => scrollToSection('#crew')}
             initial={{ opacity: 0, scale: 0.8, rotateY: -90 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
             transition={{ 
@@ -149,6 +157,7 @@ const HeroSection = () => {
           </motion.button>
 
           <motion.button
+            onClick={() => scrollToSection('#merch')}
             initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
             transition={{ 

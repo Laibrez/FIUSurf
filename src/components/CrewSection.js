@@ -24,7 +24,7 @@ const crewMembers = [
     id: 9,
     name: 'Laisha',
     role: 'Tech Director',
-    photo: '/images/crew/Lai.jpg',
+    photo: '/images/crew/ Lai.jpg',
     description:
       "Hey! I'm Laisha, I'm studying CS at FIU, basically all that you see I created it, except for the fire pics! I love to travel, be outside all the time and sometimes you will find me making music.",
     funFact: 'Tech Enthusiast',

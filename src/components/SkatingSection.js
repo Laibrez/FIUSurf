@@ -18,7 +18,7 @@ const skateContent = [
     id: 3,
     title: 'Film Premieres',
     description: 'Watch with us the latest surf videos, surf classics, edits and upcoming works.',
-    image: '/images/skating/trick-video.jpg', // Path to your image in public/images/skating
+    image: '/images/skating/939.png', // Path to your image in public/images/skating
   },
 ];
 

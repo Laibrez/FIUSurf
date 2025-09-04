@@ -15,7 +15,7 @@ const crewMembers = [
     id: 2,
     name: 'Alex',
     role: 'Vice President',
-    photo: '/images/crew/Alex.png',
+    photo: '/images/crew/alx.png',
     description:
       "Hey I'm Alex, stoked to be your VP! I'm from New Mexico and am now on my third year here chasing swells in Miami. I'm a film/TV actor and am double-majoring in Finance and International Business. My favorite experience with FIU Surf is watching the sunrise in the lineup with good waves and even better company.",
     funFact: 'Film/TV Actor from New Mexico',

@@ -15,8 +15,8 @@ const StripePricing = () => {
     {
       title: "Shipping Options",
       description: "Standard and expedited shipping",
-      pricingTableId: "prctbl_1S3cxy0Tih50iApdG1kqae4t",
-      publishableKey: "pk_test_51S03US0Tih50iApdGJ8IZxIKNzXGq5IjOt0H5gRExffx0qytegr8FJJ5LRwpO7Q33fsdGQcibRlZqys2sV3O9CTF00FQUFWvwu"
+      pricingTableId: "prctbl_1S3dcP0FUd7MfPTQZgBruK3r", // Updated to live version
+      publishableKey: "pk_live_51S03UE0FUd7MfPTQ5be98SvTgjPJ3dpMthI2GICvY2P8gbhsB4cpS6udBuolXBonjGRK2AkdGdSbjfXU1aD1zZeN00xegQeA6s" // Updated to live key
     }
   ];
 

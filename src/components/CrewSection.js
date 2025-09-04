@@ -59,7 +59,7 @@ const crewMembers = [
   {
     id: 6,
     name: 'Michelle',
-    role: 'Media Director',
+    role: 'Communications Director',
     photo: '/images/crew/michelle.jpeg',
     description:
       "Hey gang! My name is Michelle and I'm a senior double majoring in Marine Biology and Natural and Applied Sciences. I love surfing, rock climbing, and filming. If you see me, I'll probably have a camera in my hands.",
@@ -68,7 +68,7 @@ const crewMembers = [
   {
     id: 7,
     name: 'Mia',
-    role: 'Marketing',
+    role: 'Operations Director',
     photo: '/images/crew/Mia.png',
     description:
       "Hi everyone my name is Mia, I'm a third year student here at FIU studying Marketing! I started learning to surf Feb 2024 after joining the club and my favorite memory was our insane Puerto Rico Trip last year!🤙",

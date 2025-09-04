@@ -9,18 +9,18 @@ const events = [
     date: 'February 18, 2024',
     location: 'South Beach, Miami',
     type: 'Surf',
-    description: 'Elite surfing championship featuring top competitors from across Florida',
-    result: '2nd Place Overall',
+    description: 'An epic annual battle between FIU and UM to gain ultimate bragging rights.',
+    result: '2024 Champions',
     image: 'wave2.jpg'
   },
   {
     id: 2,
-    name: 'Miami Beach Open',
+    name: 'NSSA Regional Competition',
     date: 'January 14, 2024',
     location: 'Miami Beach',
     type: 'Surf',
-    description: 'Annual open competition showcasing emerging talent in competitive surfing',
-    result: '1st Place - Longboard Division',
+    description: 'A monthly competition held in New Smyrna by the NSSA.',
+    result: '4th and 5th Place Individual',
     image: 'comp1.jpg'
   }
 ];

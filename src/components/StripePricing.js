@@ -19,10 +19,10 @@ const StripePricing = () => {
 
   return (
     <>
-      <section id="merch" className="py-10 bg-white">
+      <section id="merch" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           {/* Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4 shadow-lg">
               <ShoppingBag className="w-8 h-8 text-white" />
             </div>
@@ -35,17 +35,19 @@ const StripePricing = () => {
           </div>
 
           {/* Stripe Pricing Table */}
-          <div className="p-4 rounded-xl border border-gray-200 shadow-md max-h-[600px] overflow-hidden">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <stripe-pricing-table 
-                    pricing-table-id="prctbl_1S3NWb0Tih50iApdG0qRXe1J"
-                    publishable-key="pk_test_51S03US0Tih50iApdGJ8IZxIKNzXGq5IjOt0H5gRExffx0qytegr8FJJ5LRwpO7Q33fsdGQcibRlZqys2sV3O9CTF00FQUFWvwu">
-                  </stripe-pricing-table>
-                `,
-              }}
-            />
+          <div className="w-full rounded-xl border border-gray-200 shadow-md overflow-hidden">
+            <div className="w-full min-h-[400px]">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <stripe-pricing-table 
+                      pricing-table-id="prctbl_1S3NWb0Tih50iApdG0qRXe1J"
+                      publishable-key="pk_test_51S03US0Tih50iApdGJ8IZxIKNzXGq5IjOt0H5gRExffx0qytegr8FJJ5LRwpO7Q33fsdGQcibRlZqys2sV3O9CTF00FQUFWvwu">
+                    </stripe-pricing-table>
+                  `,
+                }}
+              />
+            </div>
           </div>
 
           {/* CTA */}
@@ -66,6 +68,14 @@ const StripePricing = () => {
           --background: white;
           --text: #111827;
           --accent: #f97316;
+          width: 100%;
+          display: block;
+        }
+        
+        /* Ensure Stripe table is fully visible */
+        .stripe-pricing-table-wrapper {
+          width: 100%;
+          overflow: visible;
         }
       `}</style>
     </>
@@ -73,3 +83,4 @@ const StripePricing = () => {
 };
 
 export default StripePricing;
+

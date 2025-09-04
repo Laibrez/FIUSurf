@@ -60,7 +60,7 @@ const Navbar = () => {
             <img
               src="/images/mainsite/logosurf.png"
               alt="FIU Surf Club Logo"
-              className="h-12 lg:h-14 w-auto object-contain"
+              className="h-24 lg:h-28 w-auto object-contain"// Increased height
             />
           </motion.div>
 

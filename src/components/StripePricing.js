@@ -47,27 +47,36 @@ const StripePricing = () => {
     setCurrentSlide(index);
   };
 
+  const scrollToFooter = () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <section id="merch" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4 shadow-lg">
-              <ShoppingBag className="w-8 h-8 text-white" />
+            {/* Header */}
+            <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-2 -ml-6">
+                <img
+                src="/images/mainsite/logosurf.png"
+                alt="FIU Surf Club Logo"
+                className="h-56 w-auto object-contain"
+                />
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 -ml-9">
+                MERCH
+                </h2>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-2">
-              MERCH
-            </h2>
             <p className="text-md md:text-lg text-gray-600 max-w-xl mx-auto">
-              Rep the crew with our exclusive FIU Surf Club merchandise.
+                Rep the crew with our exclusive FIU Surf Club merchandise.
             </p>
-          </div>
+            </div>
 
           {/* Carousel Container */}
           <div className="relative w-full max-w-6xl mx-auto">
-
-
             {/* Carousel Wrapper */}
             <div className="relative overflow-hidden rounded-xl border border-gray-200 shadow-md bg-white">
               {/* Navigation Arrows */}
@@ -144,9 +153,12 @@ const StripePricing = () => {
           <div className="text-center mt-8">
             <p className="text-gray-500 text-sm">
               Questions about our merchandise?
-              <span className="text-orange-600 font-medium ml-2">
+              <button 
+                onClick={scrollToFooter}
+                className="text-orange-600 font-medium ml-2 hover:text-orange-700 underline transition-colors cursor-pointer"
+              >
                 Contact us anytime!
-              </span>
+              </button>
             </p>
           </div>
         </div>
@@ -178,5 +190,6 @@ const StripePricing = () => {
 };
 
 export default StripePricing;
+
 
 

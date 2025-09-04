@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { motion } from 'framer-motion';
 import { ShoppingBag } from 'lucide-react';
 
 const StripePricing = () => {
@@ -8,39 +7,35 @@ const StripePricing = () => {
     script.src = "https://js.stripe.com/v3/pricing-table.js";
     script.async = true;
     document.body.appendChild(script);
+
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const existingScript = document.querySelector('script[src="https://js.stripe.com/v3/pricing-table.js"]');
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
   }, []);
 
   return (
-    <section id="merch" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-orange-500 rounded-full mb-6 shadow-lg">
-            <ShoppingBag className="w-10 h-10 text-white" />
+    <>
+      <section id="merch" className="py-10 bg-white">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full mb-4 shadow-lg">
+              <ShoppingBag className="w-8 h-8 text-white" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-2">
+              MERCH
+            </h2>
+            <p className="text-md md:text-lg text-gray-600 max-w-xl mx-auto">
+              Rep the crew with our exclusive FIU Surf Club merchandise.
+            </p>
           </div>
-          <h2 className="text-5xl md:text-7xl font-black text-gray-900 mb-4">
-            MERCH
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Rep the crew with our exclusive FIU Surf Club merchandise.
-            Premium quality gear for true wave riders.
-          </p>
-        </motion.div>
 
-        {/* Stripe Pricing Table */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="p-6 rounded-2xl border border-gray-200 shadow-lg">
+          {/* Stripe Pricing Table */}
+          <div className="p-4 rounded-xl border border-gray-200 shadow-md max-h-[600px] overflow-hidden">
             <div
               dangerouslySetInnerHTML={{
                 __html: `
@@ -52,25 +47,20 @@ const StripePricing = () => {
               }}
             />
           </div>
-        </motion.div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <p className="text-gray-500">
-            Questions about our merchandise?
-            <span className="text-orange-600 font-medium ml-2">
-              Contact us anytime!
-            </span>
-          </p>
-        </motion.div>
-      </div>
+          {/* CTA */}
+          <div className="text-center mt-8">
+            <p className="text-gray-500 text-sm">
+              Questions about our merchandise?
+              <span className="text-orange-600 font-medium ml-2">
+                Contact us anytime!
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
 
+      {/* CSS Styles */}
       <style jsx>{`
         stripe-pricing-table {
           --background: white;
@@ -78,7 +68,7 @@ const StripePricing = () => {
           --accent: #f97316;
         }
       `}</style>
-    </section>
+    </>
   );
 };
 

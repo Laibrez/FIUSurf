@@ -22,55 +22,82 @@ const HeroSection = () => {
     }
   };
 
-  // Floating wave elements inspired by the designs
-  const floatingElements = Array.from({ length: 8 }, (_, i) => (
+  // Floating wave elements inspired by ocean bubbles
+  const floatingElements = Array.from({ length: 12 }, (_, i) => (
     <motion.div
       key={i}
       className="absolute"
       style={{
-        left: `${10 + i * 12}%`,
-        top: `${20 + (i % 3) * 25}%`,
+        left: `${5 + i * 8}%`,
+        top: `${15 + (i % 4) * 20}%`,
       }}
       animate={{
-        y: [-30, 30, -30],
-        rotate: [0, 360],
-        opacity: [0.1, 0.3, 0.1],
+        y: [-40, 40, -40],
+        x: [-20, 20, -20],
+        scale: [0.5, 1.2, 0.5],
+        opacity: [0.1, 0.4, 0.1],
       }}
       transition={{
-        duration: 8 + i * 0.8,
+        duration: 6 + i * 0.5,
         repeat: Infinity,
         ease: "easeInOut",
-        delay: i * 0.5,
+        delay: i * 0.3,
       }}
     >
-      <div className="w-4 h-4 rounded-full bg-white/20 blur-sm" />
+      <div className="w-3 h-3 rounded-full bg-blue-300/30 blur-sm" />
     </motion.div>
   ));
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      {/* Background Image with Enhanced Styling */}
+      {/* Background Image with Enhanced Ocean Styling */}
       <div className="absolute inset-0">
         <img
-          src="/images/mainsite/mainfs.jpg"
+          src="/images/mainsite/wave1.jpg"
           alt="Sunset waves background"
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />
         
-        {/* Dynamic gradient overlay for sunset tones */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/40 via-transparent to-pink-800/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-orange-900/20" />
+        {/* Ocean blue gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-800/50 via-cyan-600/30 to-blue-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-transparent to-cyan-700/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent" />
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Ocean Elements */}
       {floatingElements}
+
+      {/* Additional ocean wave particles */}
+      {Array.from({ length: 6 }, (_, i) => (
+        <motion.div
+          key={`wave-${i}`}
+          className="absolute"
+          style={{
+            right: `${10 + i * 15}%`,
+            bottom: `${20 + i * 10}%`,
+          }}
+          animate={{
+            rotate: [0, 360],
+            scale: [0.8, 1.5, 0.8],
+            opacity: [0.05, 0.2, 0.05],
+          }}
+          transition={{
+            duration: 8 + i,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: i * 0.7,
+          }}
+        >
+          <div className="w-6 h-6 rounded-full bg-cyan-300/20 blur-lg" />
+        </motion.div>
+      ))}
 
       {/* Parallax Content Container */}
       <motion.div 
         style={{ y }}
         className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 z-10"
       >
-        {/* Main Heading with Stagger Animation */}
+        {/* Main Heading with Ocean Glow */}
         <div className="mb-8 overflow-hidden">
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
@@ -82,7 +109,7 @@ const HeroSection = () => {
             }}
             className="text-white text-4xl md:text-7xl lg:text-8xl font-black uppercase tracking-wider drop-shadow-2xl"
             style={{
-              textShadow: '0 0 40px rgba(255,140,0,0.8), 0 0 60px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8)',
+              textShadow: '0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(14, 165, 233, 0.6), 0 0 80px rgba(6, 182, 212, 0.4), 2px 2px 8px rgba(0,0,0,0.9)',
             }}
           >
             <span className="block">FIU</span>
@@ -92,7 +119,7 @@ const HeroSection = () => {
           </motion.h1>
         </div>
 
-        {/* Subtitle with Wave Effect */}
+        {/* Subtitle with Ocean Wave Effect */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,7 +127,7 @@ const HeroSection = () => {
           className="mb-12 relative"
         >
           <p className="text-white text-xl md:text-3xl font-light tracking-wide drop-shadow-2xl"
-             style={{ textShadow: '0 0 20px rgba(0,0,0,0.9), 0 2px 4px rgba(255,140,0,0.3)' }}>
+             style={{ textShadow: '0 0 30px rgba(14, 165, 233, 0.8), 0 2px 8px rgba(0,0,0,0.9)' }}>
             RIDE THE WAVE OF ADVENTURE
           </p>
           <motion.div
@@ -114,11 +141,11 @@ const HeroSection = () => {
               ease: "easeInOut",
               delay: 1.5
             }}
-            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 w-32 bg-gradient-to-r from-transparent via-orange-400 to-transparent"
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 w-32 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
           />
         </motion.div>
 
-        {/* Enhanced Buttons */}
+        {/* Enhanced Ocean-themed Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 relative z-20">
           <motion.button
             onClick={() => scrollToSection('#crew')}
@@ -133,11 +160,14 @@ const HeroSection = () => {
             }}
             whileHover={{ 
               scale: 1.05,
-              boxShadow: '0 20px 40px rgba(255, 140, 0, 0.4)',
-              backgroundColor: '#ea580c'
+              boxShadow: '0 20px 40px rgba(59, 130, 246, 0.5), 0 0 60px rgba(14, 165, 233, 0.3)',
+              backgroundColor: '#1d4ed8'
             }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-10 py-5 bg-orange-600 text-white text-lg font-bold rounded-full shadow-xl overflow-hidden transform transition-all duration-300"
+            className="group relative px-10 py-5 bg-blue-600 text-white text-lg font-bold rounded-full shadow-2xl overflow-hidden transform transition-all duration-300"
+            style={{
+              boxShadow: '0 10px 30px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+            }}
           >
             <span className="relative z-10 flex items-center gap-2">
               JOIN THE CLUB
@@ -149,7 +179,7 @@ const HeroSection = () => {
               </motion.span>
             </span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500"
+              className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500"
               initial={{ x: '-100%' }}
               whileHover={{ x: 0 }}
               transition={{ duration: 0.3 }}
@@ -169,11 +199,15 @@ const HeroSection = () => {
             }}
             whileHover={{ 
               scale: 1.05,
-              boxShadow: '0 20px 40px rgba(255, 140, 0, 0.3)',
-              backgroundColor: 'rgba(255, 255, 255, 0.98)'
+              boxShadow: '0 20px 40px rgba(6, 182, 212, 0.4), 0 0 60px rgba(14, 165, 233, 0.2)',
+              backgroundColor: 'rgba(255, 255, 255, 0.98)',
+              borderColor: 'rgba(6, 182, 212, 0.6)'
             }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-10 py-5 bg-white/95 backdrop-blur-sm text-orange-700 text-lg font-bold rounded-full shadow-xl border-2 border-orange-200/50 overflow-hidden transform transition-all duration-300"
+            className="group relative px-10 py-5 bg-white/90 backdrop-blur-sm text-blue-700 text-lg font-bold rounded-full shadow-2xl border-2 border-cyan-200/60 overflow-hidden transform transition-all duration-300"
+            style={{
+              boxShadow: '0 10px 30px rgba(6, 182, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.8)'
+            }}
           >
             <span className="relative z-10 flex items-center gap-2">
               SHOP MERCH
@@ -184,10 +218,16 @@ const HeroSection = () => {
                 🏄‍♂️
               </motion.span>
             </span>
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-cyan-50 to-blue-50"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: 0 }}
+              transition={{ duration: 0.3 }}
+            />
           </motion.button>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Ocean-themed Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -197,13 +237,17 @@ const HeroSection = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center"
-            style={{ boxShadow: '0 0 10px rgba(0,0,0,0.5)' }}
+            className="w-6 h-10 border-2 border-cyan-300/80 rounded-full flex justify-center backdrop-blur-sm"
+            style={{ 
+              boxShadow: '0 0 20px rgba(6, 182, 212, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+              backgroundColor: 'rgba(14, 165, 233, 0.1)'
+            }}
           >
             <motion.div
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-white rounded-full mt-2"
+              className="w-1 h-3 bg-cyan-300 rounded-full mt-2"
+              style={{ boxShadow: '0 0 8px rgba(6, 182, 212, 0.6)' }}
             />
           </motion.div>
         </motion.div>
@@ -213,4 +257,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 

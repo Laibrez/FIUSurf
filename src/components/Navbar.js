@@ -19,21 +19,21 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'Merch', href: '#merch' },
     { name: 'Crew', href: '#crew' },
-    { name: 'Calendar', href: '#calendar' }, // Ensure this matches the id in App.js
+    { name: 'Calendar', href: '#calendar' },
     { name: 'Surfing', href: '#surfing' },
     { name: 'Trips', href: '#trips' },
     { name: 'Competitions', href: '#competitions' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Other', href: '#skating' } // This correctly points to skating section
   ];
 
   const scrollToSection = (href) => {
-    console.log(`Attempting to scroll to: ${href}`); // Log the href being passed
+    console.log(`Attempting to scroll to: ${href}`);
     const element = document.querySelector(href);
     if (element) {
-      console.log(`Element found:`, element); // Log the element if found
+      console.log(`Element found:`, element);
       element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      console.error(`Element not found for href: ${href}`); // Log an error if the element is not found
+      console.error(`Element not found for href: ${href}`);
     }
     setIsMobileMenuOpen(false);
   };
@@ -51,7 +51,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo Section - Replaced with fslogo.jpg */}
+          {/* Logo Section */}
           <motion.div
             className="flex items-center"
             whileHover={{ scale: 1.05 }}
@@ -96,26 +96,26 @@ const Navbar = () => {
           {/* Action Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <motion.button
-              onClick={() => scrollToSection('#merch')} // Updated to navigate to #merch
+              onClick={() => scrollToSection('#merch')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${
                 isScrolled
-                  ? 'bg-orange-600 text-white hover:bg-orange-700 shadow-md'
-                  : 'bg-orange-500 text-white hover:bg-orange-600 shadow-lg'
+                  ? 'bg-amber-700 text-white hover:bg-amber-800 shadow-md'
+                  : 'bg-amber-600 text-white hover:bg-amber-700 shadow-lg'
               }`}
             >
               Merch
             </motion.button>
             
             <motion.button
-              onClick={() => scrollToSection('#crew')} // Updated to navigate to #crew
+              onClick={() => scrollToSection('#crew')} // Changed to #crew to scroll to group photo section
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-2 rounded-full font-semibold border-2 transition-all duration-200 ${
                 isScrolled
-                  ? 'border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
-                  : 'border-white text-white hover:bg-white hover:text-orange-600'
+                  ? 'border-stone-600 text-stone-600 hover:bg-stone-600 hover:text-white' // Fixed brown colors
+                  : 'border-white text-white hover:bg-white hover:text-stone-600'
               }`}
             >
               Join Us
@@ -159,7 +159,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -203,7 +202,7 @@ const Navbar = () => {
                 </motion.button>
                 
                 <motion.button
-                  onClick={() => scrollToSection('#crew')}
+                  onClick={() => scrollToSection('#crew')} // Fixed to point to #crew instead of #group-photo
                   className="w-full py-3 border-2 border-orange-600 text-orange-600 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-all"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -218,6 +217,5 @@ const Navbar = () => {
     </motion.nav>
   );
 };
-
 
 export default Navbar;

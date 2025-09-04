@@ -1,32 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Trophy, Users } from 'lucide-react';
+import { Calendar, MapPin, Trophy, Users, Instagram } from 'lucide-react';
 
 const events = [
   {
     id: 1,
-    name: 'FIU Surf Classic',
-    date: 'March 15, 2025',
-    location: 'South Beach',
+    name: 'Miami Masters Championship',
+    date: 'February 18, 2024',
+    location: 'South Beach, Miami',
     type: 'Surf',
-    description: 'Annual championship event featuring the best FIU surfers'
+    description: 'Elite surfing championship featuring top competitors from across Florida',
+    result: '2nd Place Overall',
+    image: 'wave2.jpg'
   },
   {
     id: 2,
-    name: 'FIU Skate Jam',
-    date: 'April 22, 2025',
-    location: 'Local Skate Park',
-    type: 'Skate',
-    description: 'Street and vert competition for all skill levels'
-  },
-  {
-    id: 3,
-    name: 'Battle of the Boards',
-    date: 'May 10, 2025',
-    location: 'Haulover Beach',
+    name: 'Miami Beach Open',
+    date: 'January 14, 2024',
+    location: 'Miami Beach',
     type: 'Surf',
-    description: 'Epic surf battle between universities across Florida'
-  },
+    description: 'Annual open competition showcasing emerging talent in competitive surfing',
+    result: '1st Place - Longboard Division',
+    image: 'comp1.jpg'
+  }
 ];
 
 const CompetitionSection = () => {
@@ -94,8 +90,8 @@ const CompetitionSection = () => {
           />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Events */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left Side - Previous Results */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -103,7 +99,7 @@ const CompetitionSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="text-3xl font-bold text-white mb-8">Upcoming Events</h3>
+            <h3 className="text-3xl font-bold text-white mb-8">Previous Results</h3>
             
             {events.map((event, index) => (
               <motion.div
@@ -112,57 +108,96 @@ const CompetitionSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <h4 className="text-xl font-bold text-white">{event.name}</h4>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    event.type === 'Surf' 
-                      ? 'bg-blue-500/20 text-blue-200' 
-                      : 'bg-green-500/20 text-green-200'
-                  }`}>
-                    {event.type}
-                  </span>
-                </div>
-                
-                <div className="space-y-2 text-white/80">
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{event.date}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{event.location}</span>
+                {/* Competition Image */}
+                <div className="relative w-full h-64">
+                  <img
+                    src={`/images/comps/${event.image}`}
+                    alt={event.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/80 text-white backdrop-blur-sm">
+                      {event.result}
+                    </span>
                   </div>
                 </div>
-                
-                <p className="text-white/70 text-sm mt-3">{event.description}</p>
+
+                {/* Competition Details */}
+                <div className="p-3">
+                  <div className="flex items-start justify-between mb-2">
+                    <h4 className="text-base font-bold text-white">{event.name}</h4>
+                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-200">
+                      {event.type}
+                    </span>
+                  </div>
+                  
+                  <div className="space-y-0.5 text-white/80 mb-1">
+                    <div className="flex items-center space-x-2">
+                      <Calendar className="w-3 h-3" />
+                      <span className="text-xs">{event.date}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="w-3 h-3" />
+                      <span className="text-xs">{event.location}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-white/70 text-xs leading-tight">{event.description}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Right Side - Video & CTA */}
+          {/* Right Side - Instagram Reel & CTA */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-8 sticky top-8"
           >
-            {/* Competition Video */}
-            <div className="relative">
-              <div className="aspect-video bg-black/30 rounded-xl overflow-hidden backdrop-blur-sm border border-white/20">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  poster="/images/competitions/competition-thumbnail.jpg"
-                >
-                  <source src="/videos/competitions/fiu-surf-classic-2024.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+            {/* Instagram Reel Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center"
+            >
+              <div className="flex items-center justify-center mb-4">
+                <Instagram className="w-6 h-6 text-pink-400 mr-2" />
+                <h3 className="text-xl font-bold text-white">Competition Highlights</h3>
               </div>
-              <div className="absolute inset-0 rounded-xl border-2 border-orange-400/30 pointer-events-none" />
-            </div>
+              
+              <div className="bg-black/30 rounded-lg p-4 mb-4 min-h-[300px] flex items-center justify-center border-2 border-dashed border-white/30">
+                <iframe
+                  src="https://www.instagram.com/reel/DGLgalEuyuy/embed"
+                  width="100%"
+                  height="450"
+                  frameBorder="0"
+                  scrolling="no"
+                  allowTransparency={true}
+                  className="rounded-lg"
+                  title="FIU Surf Club Competition Reel"
+                />
+              </div>
+              
+              <motion.button
+                onClick={() => window.open('https://www.instagram.com/fiusurf/?hl=en', '_blank')}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: '0 10px 30px rgba(255, 20, 147, 0.3)',
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full py-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-bold rounded-full shadow-xl hover:from-pink-700 hover:to-purple-700 transition-all duration-300"
+              >
+                <Instagram className="w-4 h-4 inline mr-2" />
+                VIEW MORE ON INSTAGRAM
+              </motion.button>
+            </motion.div>
 
             {/* Join Competition CTA */}
             <motion.div
@@ -170,31 +205,28 @@ const CompetitionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 text-center"
             >
-              <Trophy className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <Trophy className="w-10 h-10 text-orange-400 mx-auto mb-2" />
+              <h3 className="text-lg font-bold text-white mb-2">
                 JOIN US IN THE NEXT COMPETITION
               </h3>
-              <p className="text-white/80 mb-6 leading-relaxed">
-                Think you have what it takes? Sign up for our upcoming competitions and 
-                represent FIU Surf Club. All skill levels welcome!
+              <p className="text-white/80 mb-4 text-sm leading-relaxed">
+                Think you have what it takes? Sign up for our upcoming competitions!
               </p>
               
-              <div className="space-y-4">
-                <motion.button
-                  onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdUCybB7bGEfTrhF7q2XPWHZQ78n2Qd1kxSaN_gULJSCHmlYA/viewform', '_blank')}
-                  whileHover={{ 
-                    scale: 1.05,
-                    boxShadow: '0 20px 40px rgba(255, 140, 0, 0.4)',
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full py-4 bg-orange-600 text-white font-bold rounded-full shadow-xl hover:bg-orange-700 transition-all duration-300"
-                >
-                  <Users className="w-5 h-5 inline mr-2" />
-                  REGISTER NOW
-                </motion.button>
-              </div>
+              <motion.button
+                onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSdUCybB7bGEfTrhF7q2XPWHZQ78n2Qd1kxSaN_gULJSCHmlYA/viewform', '_blank')}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: '0 15px 30px rgba(255, 140, 0, 0.4)',
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full py-3 bg-orange-600 text-white font-bold rounded-full shadow-xl hover:bg-orange-700 transition-all duration-300 text-sm"
+              >
+                <Users className="w-4 h-4 inline mr-2" />
+                REGISTER NOW
+              </motion.button>
             </motion.div>
           </motion.div>
         </div>
@@ -202,6 +234,5 @@ const CompetitionSection = () => {
     </section>
   );
 };
-
 
 export default CompetitionSection;

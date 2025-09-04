@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div>
           <h4 className="text-xl font-bold mb-4">Contact</h4>
-          <p className="text-gray-400">Email: info@fiusurfclub.com</p>
+          <p className="text-gray-400">Email: <a href="mailto:fiusurfclub@gmail.com" className="text-orange-400 hover:underline">fiusurfclub@gmail.com</a></p>
           <p className="text-gray-400">Phone: (123) 456-7890</p>
           <p className="text-gray-400">Address: 11200 SW 8th St, Miami, FL 33199</p>
         </div>

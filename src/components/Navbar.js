@@ -58,7 +58,7 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
           >
             <img
-              src="/images/mainsite/fslogo.jpg"
+              src="/images/mainsite/logosurf.png"
               alt="FIU Surf Club Logo"
               className="h-12 lg:h-14 w-auto object-contain"
             />

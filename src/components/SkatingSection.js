@@ -12,7 +12,7 @@ const skateContent = [
     id: 2,
     title: 'Social Events',
     description: 'Hangouts, meetups, sport-events, trips and more. Get to know amazing people.',
-    image: '/images/skating/skate-spot.jpg', // Path to your image in public/images/skating
+    image: '/images/skating/social1.jpeg', // Path to your image in public/images/skating
   },
   {
     id: 3,

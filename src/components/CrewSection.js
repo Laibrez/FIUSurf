@@ -31,7 +31,7 @@ const crewMembers = [
   },
   {
     id: 3,
-    name: 'Nathan Jennings',
+    name: 'Nathan',
     role: 'Treasurer',
     photo: '/images/crew/Nathan.png',
     description:
@@ -60,7 +60,7 @@ const crewMembers = [
     id: 6,
     name: 'Michelle',
     role: 'Media Director',
-    photo: '/images/crew/michelle.png',
+    photo: '/images/crew/michelle.jpeg',
     description:
       "Hey gang! My name is Michelle and I'm a senior double majoring in Marine Biology and Natural and Applied Sciences. I love surfing, rock climbing, and filming. If you see me, I'll probably have a camera in my hands.",
     funFact: 'Always filming 🎥',

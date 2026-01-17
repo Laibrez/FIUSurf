@@ -203,14 +203,16 @@ const Navbar = () => {
                   Merch
                 </motion.button>
                 
-                <motion.button
-                  onClick={() => scrollToSection('#crew')} // Fixed to point to #crew instead of #group-photo
-                  className="w-full py-3 border-2 border-orange-600 text-orange-600 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-all"
+                <motion.a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfiBjwcwiqWjNG6JABtm4GXLe4oDjTNi1nNIVM5u1l1eiQorQ/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 border-2 border-orange-600 text-orange-600 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-all block text-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   Join Us
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </motion.div>

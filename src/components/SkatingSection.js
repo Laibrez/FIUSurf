@@ -38,7 +38,7 @@ const sponsors = [
 
 const SkatingSection = () => {
   return (
-    <section id="other events" className="relative py-20 bg-gray-800 text-white overflow-hidden">
+    <section id="skating" className="relative py-20 bg-gray-800 text-white overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -50 }}

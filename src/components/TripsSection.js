@@ -47,21 +47,21 @@ const trips = [
 const flashcards = [
   {
     id: 1,
-    title: 'We go International',
-    description: 'Adventures across different countries',
-    icon: '🌍',
+    title: 'Swell Chasing Trips',
+    description: 'We regularly take road-trips up to where the waves are breaking best',
+    icon: '🏄‍♂️',
   },
   {
     id: 2,
-    title: 'We go Camping',
-    description: 'Under the stars and by the waves',
+    title: 'Competition Trips',
+    description: 'We compete against other collegiate surf teams, often camping near the surf break',
     icon: '🏕️',
   },
   {
     id: 3,
-    title: 'We go Surfing',
-    description: 'Chasing swells and perfect waves',
-    icon: '🏄‍♂️',
+    title: 'Trips to some of the best surf spots in the world',
+    description: 'Our members have surfed in almost every continent',
+    icon: '🌍',
   },
 ];
 

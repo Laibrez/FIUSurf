@@ -4,62 +4,53 @@ import { Instagram, UserPlus, MapPin, GraduationCap, Award, ChevronLeft, Chevron
 const crewMembers = [
   {
     id: 1,
-    name: 'Elan',
-    role: 'President',
-    photo: '/images/crew/elan.png',
-    description:
-      "Hey. I'm Elan, the Surf Club president. I've been surfing pretty much my whole life and I'm still as hooked as day one. My favorite thing about the club is all the fun trips we take and all the great memories that come from them. I'm so stoked to make more this year!",
-    funFact: 'Surfing since childhood',
-  },
-  {
-    id: 2,
     name: 'Alex',
-    role: 'Vice President',
-    photo: '/images/crew/alx.jpg',
+    role: 'President',
+    photo: '/images/crew/alx.png',
     description:
-      "Hey I'm Alex, stoked to be your VP! I'm from New Mexico and am now on my third year here chasing swells in Miami. I'm a film/TV actor and am double-majoring in Finance and International Business. My favorite experience with FIU Surf is watching the sunrise in the lineup with good waves and even better company.",
+      "Hey! I'm Alex, a senior student here at FIU. Stoked to lead the club this year- feel free to reach out to me directly at my email alex.wagenman@gmail.com",
     funFact: 'Film/TV Actor from New Mexico',
   },
   {
-    id: 9,
-    name: 'Laisha',
-    role: 'Tech Director',
-    photo: '/images/crew/Lb.png',
+    id: 2,
+    name: 'Kalvin',
+    role: 'Vice President',
+    photo: '/images/crew/alx.jpg',
     description:
-      "Hey! I'm Laisha, I'm studying CS at FIU, basically all that you see I created it, except for the fire pics! I love to travel, be outside all the time and sometimes you will find me making music.",
-    funFact: 'Tech Enthusiast',
+      "Hey I'm Kalvin, VP of the Surf Club.",
+    funFact: 'Chief of Stoke',
   },
   {
     id: 3,
-    name: 'Nathan',
+    name: 'Nile',
     role: 'Treasurer',
     photo: '/images/crew/Nathan.png',
     description:
-      "Hey guys! I'm Nathan, FIU Surf's Treasurer and 4th year Accounting-Marketing major. I went into this club following 2 of my friends, just looking for cool parties with cool people, but I ended up finding so much more: a new favorite hobby and dozens of the coolest friends ever.",
-    funFact: 'Accounting-Marketing Major',
+      "Hey guys! I'm Nile! I'm from the Basque region of Spain.",
+    funFact: 'International Business & Finance Major',
   },
   {
     id: 4,
-    name: 'Dani',
+    name: 'Francesca',
     role: 'Secretary',
     photo: '/images/crew/Daniela.png',
     description:
-      "Hey y'all! I'm Daniela, your Surf Club secretary. I'm from Venezuela and a senior majoring in Biology. I caught my first waves with this club, and I'm so proud of the crew, the community, and all the memories we've made. Stoked for another year of good vibes, see you in the lineup!",
-    funFact: 'From Venezuela 🌊',
+      "Hey y'all! I'm Fran, your Surf Club Secretary!",
+    funFact: 'From Peru 🌊',
   },
   {
     id: 5,
-    name: 'Ava',
+    name: 'Iddrisu',
     role: 'Risk Manager',
     photo: '/images/crew/Ava.png',
     description:
-      "Whats up! I'm Ava, risk manager. I'm majoring in kinesiology & exercise science, class of 2027. Here to make sure the only wipe outs are in the water, not the hospital 🤞",
+      "Whats up! I'm Iddrisu, Risk Manager for the Surf Club",
     funFact: 'Keeps us safe!',
   },
   {
     id: 6,
     name: 'Alondra',
-    role: 'Performative Photographer',
+    role: 'Media Director',
     photo: '/images/crew/alondra.png',
     description:
       "Howdy! My name is Alondra and I’m an undergrad majoring in Marine Biology. When I’m not filming surfers in the water Im probably skating or studying for exams. Big chicken Joe fan, yew!!",
@@ -71,17 +62,17 @@ const crewMembers = [
     role: 'Operations Director',
     photo: '/images/crew/Mia.png',
     description:
-      "Hi everyone my name is Mia, I'm a third year student here at FIU studying Marketing! I started learning to surf Feb 2024 after joining the club and my favorite memory was our insane Puerto Rico Trip last year!🤙",
+      "Hi everyone my name is Mia, I'm a fourth year student here at FIU studying Marketing! I started learning to surf Feb 2024 after joining the club and my favorite memory was our insane Puerto Rico Trip last year!🤙",
     funFact: 'Puerto Rico trip lover',
   },
   {
     id: 8,
-    name: 'David',
-    role: 'Competition Director',
+    name: 'Vance',
+    role: 'Sponsorship Coordinator & Competition Director',
     photo: '/images/crew/David.png',
     description:
-      "Hi guys, my name is David! I'm a 3rd year Earth Science major. I like competing in Triathlons and flying on the weekends. I joined the club last year and was lucky enough to become the Comp Director too!",
-    funFact: 'Triathlete & Pilot ✈️',
+      "Hi guys, my name is Vance!",
+    funFact: 'Used to live in Costa Rica',
   },
 ];
 

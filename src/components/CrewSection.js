@@ -6,16 +6,16 @@ const crewMembers = [
     id: 1,
     name: 'Alex',
     role: 'President',
-    photo: '/images/crew/alx.png',
+    photo: '/images/crew/alx.jpg',
     description:
-      "Hey! I'm Alex, a senior student here at FIU. Stoked to lead the club this year- feel free to reach out to me directly at my email alex.wagenman@gmail.com",
+      "Hey! I'm Alex, a senior student here at FIU. My favorite thing about Surf Club is helping people catch their first waves! Feel free to reach out to me directly at my email alex.wagenman@gmail.com",
     funFact: 'Film/TV Actor from New Mexico',
   },
   {
     id: 2,
     name: 'Kalvin',
     role: 'Vice President',
-    photo: '/images/crew/alx.jpg',
+    photo: '/images/crew/kalvin.png',
     description:
       "Hey I'm Kalvin, VP of the Surf Club.",
     funFact: 'Chief of Stoke',
@@ -24,7 +24,7 @@ const crewMembers = [
     id: 3,
     name: 'Nile',
     role: 'Treasurer',
-    photo: '/images/crew/Nathan.png',
+    photo: '/images/crew/Nile.jpeg',
     description:
       "Hey guys! I'm Nile! I'm from the Basque region of Spain.",
     funFact: 'International Business & Finance Major',

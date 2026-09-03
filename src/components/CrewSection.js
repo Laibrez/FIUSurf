@@ -24,7 +24,7 @@ const crewMembers = [
     id: 3,
     name: 'Nile',
     role: 'Treasurer',
-    photo: '/images/crew/Nile.jpeg',
+    photo: '/images/crew/nile.jpg',
     description:
       "Hey guys! I'm Nile! I'm from the Basque region of Spain.",
     funFact: 'International Business & Finance Major',

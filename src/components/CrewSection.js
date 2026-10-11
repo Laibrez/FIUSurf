@@ -6,10 +6,10 @@ const crewMembers = [
     id: 1,
     name: 'Alex',
     role: 'President',
-    photo: '/images/crew/alx.jpg',
+    photo: '/images/crew/alexeboard.jpg',
     description:
-      "Hey! I'm Alex, a senior student here at FIU. My favorite thing about Surf Club is helping people catch their first waves! Feel free to reach out to me directly at my email alex.wagenman@gmail.com",
-    funFact: 'Film/TV Actor from New Mexico',
+      "Hey! I'm Alex, a senior student here at FIU. My favorite thing about Surf Club is helping people catch their first waves! Feel free to reach out to me directly at my email if you have any questions alex.wagenman@gmail.com",
+    funFact: 'Club President',
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const crewMembers = [
     role: 'Vice President',
     photo: '/images/crew/kalvineboard.jpg',
     description:
-      "Hey I'm Kalvin, VP of the Surf Club.",
-    funFact: 'Chief of Stoke',
+      "Hey I'm Kalvin, VP of the Surf Club. My favorite part of the club is chasing swells with the group and scoring some nice ones",
+    funFact: 'VP & Chief of Stoke',
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ const crewMembers = [
     role: 'Treasurer',
     photo: '/images/crew/nileeboard.jpg',
     description:
-      "Hey guys! I'm Nile! I'm from the Basque region of Spain.",
-    funFact: 'International Business & Finance Major',
+      "Hey guys! I'm Nile! I used to surf where I'm from, in the Basque region of Spain. Love to come out anytime there's waves.",
+    funFact: 'Treasurer',
   },
   {
     id: 4,
@@ -35,8 +35,8 @@ const crewMembers = [
     role: 'Secretary',
     photo: '/images/crew/franeboard.jpg',
     description:
-      "Hey y'all! I'm Fran, your Surf Club Secretary!",
-    funFact: 'From Peru 🌊',
+      "Hey y'all! I'm Fran, your Surf Club Secretary! I come from Peru, and have learned so much with this club :)",
+    funFact: 'Secretary',
   },
   {
     id: 5,
@@ -44,8 +44,8 @@ const crewMembers = [
     role: 'Risk Manager',
     photo: '/images/crew/iddrisu.jpeg',
     description:
-      "Whats up! I'm Iddrisu, Risk Manager for the Surf Club",
-    funFact: 'Keeps us safe!',
+      "Whats up! I'm Iddrisu, Risk Manager for the Surf Club. I used to live in Bocas Del Toro and surfed there a ton.",
+    funFact: 'Risk Manager',
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ const crewMembers = [
     photo: '/images/crew/alondraeboard.jpg',
     description:
       "Howdy! My name is Alondra and I’m an undergrad majoring in Marine Biology. When I’m not filming surfers in the water Im probably skating or studying for exams. Big chicken Joe fan, yew!!",
-    funFact: 'Always filming 🎥',
+    funFact: 'Media Director 🎥',
   },
   {
     id: 7,
@@ -63,16 +63,16 @@ const crewMembers = [
     photo: '/images/crew/miaeboard.jpg',
     description:
       "Hi everyone my name is Mia, I'm a fourth year student here at FIU studying Marketing! I started learning to surf Feb 2024 after joining the club and my favorite memory was our insane Puerto Rico Trip last year!🤙",
-    funFact: 'Puerto Rico trip lover',
+    funFact: 'Operations Director',
   },
   {
     id: 8,
     name: 'Vance',
-    role: 'Sponsorship Coordinator & Competition Director',
+    role: 'Sponsorships & Competition Lead',
     photo: '/images/crew/vanceeboard.jpg',
     description:
-      "Hi guys, my name is Vance!",
-    funFact: 'Used to live in Costa Rica',
+      "Hi guys, my name is Vance! I'm from the Florida Keys, and used to live in Costa Rica.",
+    funFact: 'Sponsorship Coordinator & Competitive Director',
   },
 ];
 

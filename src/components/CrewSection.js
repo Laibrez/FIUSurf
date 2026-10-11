@@ -6,16 +6,16 @@ const crewMembers = [
     id: 1,
     name: 'Alex',
     role: 'President',
-    photo: '/images/crew/alx.png',
+    photo: '/images/crew/alx.jpg',
     description:
-      "Hey! I'm Alex, a senior student here at FIU. Stoked to lead the club this year- feel free to reach out to me directly at my email alex.wagenman@gmail.com",
+      "Hey! I'm Alex, a senior student here at FIU. My favorite thing about Surf Club is helping people catch their first waves! Feel free to reach out to me directly at my email alex.wagenman@gmail.com",
     funFact: 'Film/TV Actor from New Mexico',
   },
   {
     id: 2,
     name: 'Kalvin',
     role: 'Vice President',
-    photo: '/images/crew/alx.jpg',
+    photo: '/images/crew/kalvineboard.jpg',
     description:
       "Hey I'm Kalvin, VP of the Surf Club.",
     funFact: 'Chief of Stoke',
@@ -24,7 +24,7 @@ const crewMembers = [
     id: 3,
     name: 'Nile',
     role: 'Treasurer',
-    photo: '/images/crew/Nathan.png',
+    photo: '/images/crew/nileeboard.jpg',
     description:
       "Hey guys! I'm Nile! I'm from the Basque region of Spain.",
     funFact: 'International Business & Finance Major',
@@ -33,7 +33,7 @@ const crewMembers = [
     id: 4,
     name: 'Francesca',
     role: 'Secretary',
-    photo: '/images/crew/Daniela.png',
+    photo: '/images/crew/franeboard.jpg',
     description:
       "Hey y'all! I'm Fran, your Surf Club Secretary!",
     funFact: 'From Peru 🌊',
@@ -42,7 +42,7 @@ const crewMembers = [
     id: 5,
     name: 'Iddrisu',
     role: 'Risk Manager',
-    photo: '/images/crew/Ava.png',
+    photo: '/images/crew/iddrisu.jpeg',
     description:
       "Whats up! I'm Iddrisu, Risk Manager for the Surf Club",
     funFact: 'Keeps us safe!',
@@ -51,7 +51,7 @@ const crewMembers = [
     id: 6,
     name: 'Alondra',
     role: 'Media Director',
-    photo: '/images/crew/alondra.png',
+    photo: '/images/crew/alondraeboard.jpg',
     description:
       "Howdy! My name is Alondra and I’m an undergrad majoring in Marine Biology. When I’m not filming surfers in the water Im probably skating or studying for exams. Big chicken Joe fan, yew!!",
     funFact: 'Always filming 🎥',
@@ -60,7 +60,7 @@ const crewMembers = [
     id: 7,
     name: 'Mia',
     role: 'Operations Director',
-    photo: '/images/crew/Mia.png',
+    photo: '/images/crew/miaeboard.jpg',
     description:
       "Hi everyone my name is Mia, I'm a fourth year student here at FIU studying Marketing! I started learning to surf Feb 2024 after joining the club and my favorite memory was our insane Puerto Rico Trip last year!🤙",
     funFact: 'Puerto Rico trip lover',
@@ -69,7 +69,7 @@ const crewMembers = [
     id: 8,
     name: 'Vance',
     role: 'Sponsorship Coordinator & Competition Director',
-    photo: '/images/crew/David.png',
+    photo: '/images/crew/vanceeboard.jpg',
     description:
       "Hi guys, my name is Vance!",
     funFact: 'Used to live in Costa Rica',
@@ -147,14 +147,13 @@ const CrewSection = () => {
             <Award className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Meet the{' '}
+            Meet our{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-              Crew
+              Executive Board
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our passionate leadership team dedicated to creating the best surf experience at FIU.
-            We're more than a club, we're a family riding the waves together! 🌊
           </p>
         </div>
 

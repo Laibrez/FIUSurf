@@ -53,7 +53,7 @@ const HeroSection = () => {
       {/* Background Image with Enhanced Ocean Styling */}
       <div className="absolute inset-0">
         <img
-          src="/images/mainsite/wave1.jpg"
+          src="/images/mainsite/alexprfrontsidewave.jpeg"
           alt="Sunset waves background"
           className="absolute inset-0 w-full h-full object-cover scale-105"
         />

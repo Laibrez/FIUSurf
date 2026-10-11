@@ -26,17 +26,17 @@ const sponsors = [
   {
     id: 1,
     name: 'Sponsor 1',
-    image: '/images/skating/social1.jpeg',
+    image: '/images/skating/watersport.png',
   },
   {
     id: 2,
     name: 'Sponsor 2',
-    image: '/images/skating/social1.jpeg',
+    image: '/images/skating/red_bull.png',
   },
   {
     id: 3,
     name: 'Sponsor 3',
-    image: '/images/skating/social1.jpeg',
+    image: '/images/skating/sector9logo.png',
   },
 ];
 
